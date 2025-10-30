@@ -11,3 +11,4 @@ This repository contains my C programming projects, including examples and pract
 - **SUM OF NUMBERS AND SQUARES:** Calculates the sum of all integers from 1 to a user-entered number & Calculates the sum of the squares of all integers from 1 to a user-entered number
 - **AVERAGE OF NUMBERS: Calculates:** the average of user-entered numbers using a for loop
 - **MULTIPLICATION USING ADDITION:** Multiplies two numbers by adding one number repeatedly instead of using the * operator.
+- **MULTIPLICATION TABLE PLUS ONE:** Prints a 5x5 table where each cell is (row × column) + 1 using nested loops.

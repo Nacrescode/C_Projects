@@ -10,3 +10,4 @@ This repository contains my C programming projects, including examples and pract
 - **QUADRATIC EQUATION ROOTS:** Solves the quadratic equation ax² + bx + c = 0
 - **SUM OF NUMBERS AND SQUARES:** Calculates the sum of all integers from 1 to a user-entered number & Calculates the sum of the squares of all integers from 1 to a user-entered number
 - **AVERAGE OF NUMBERS: Calculates:** the average of user-entered numbers using a for loop
+- **MULTIPLICATION USING ADDITION:** Multiplies two numbers by adding one number repeatedly instead of using the * operator.

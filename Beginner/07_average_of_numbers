@@ -19,8 +19,7 @@
  * - number: each number entered by the user
  * - total: sum of all numbers
  * - average: the calculated mean value
- *
- * AUTHOR: Nacres Ilıgyas
+
  *******************************************************************************/
 
 #include <stdio.h>

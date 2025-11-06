@@ -12,3 +12,5 @@ This repository contains my C programming projects, including examples and pract
 - **AVERAGE OF NUMBERS: Calculates:** the average of user-entered numbers using a for loop
 - **MULTIPLICATION USING ADDITION:** Multiplies two numbers by adding one number repeatedly instead of using the * operator.
 - **MULTIPLICATION TABLE PLUS ONE:** Prints a 5x5 table where each cell is (row × column) + 1 using nested loops.
+- **REVERSE NUMBER TRIANGLE:** Prints a triangle pattern where each row displays numbers in descending order starting from the row number  
+- **PYRAMID STAR PATTERN:** Prints a centered pyramid made of stars (*) where each row adds two more stars than the previous one  

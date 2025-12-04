@@ -42,7 +42,7 @@ int main()
     return 0;    // end program
 }
 
-/********************************************************************/
+/******************************************************************************/
 
 /*
     This program reads numbers from the user.
@@ -96,3 +96,44 @@ int main()
 
     return 0;   // end program
 }
+
+/******************************************************************************/
+/*
+    This program reads numbers from the user.
+    It makes a new array with cumulative sum.
+    Each new element is: previous sum + current number.
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int i, count, arr[100], sumArr[100];
+
+    printf("Number of elements: ");   // ask for count
+    scanf("%d", &count);              // read count
+
+    for(i = 0; i < count; i++)
+    {
+        printf("arr[%d] = ", i);      // show index
+        scanf("%d", &arr[i]);         // read number
+        sumArr[i] = 0;                // set to zero first
+    }
+
+    sumArr[0] = arr[0];               // first value
+
+    for(i = 1; i < count; i++)
+    {
+        sumArr[i] = sumArr[i - 1] + arr[i];   // cumulative sum
+    }
+
+    for(i = 0; i < count; i++)
+    {
+        printf("%4d %4d\n", arr[i], sumArr[i]);   // print arrays
+    }
+
+    return 0;   // end program
+}
+
+/******************************************************************************/
+

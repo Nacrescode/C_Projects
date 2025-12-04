@@ -15,4 +15,6 @@ This repository contains my C programming projects, including examples and pract
 - **REVERSE NUMBER TRIANGLE:** Prints a triangle pattern where each row displays numbers in descending order starting from the row number  
 - **PYRAMID STAR PATTERN:** Prints a centered pyramid made of stars (*) where each row adds two more stars than the previous one
 - **DIGIT SUM AND REVERSE NUMBER:** Calculates the sum of digits of a user-entered number and also prints the number in reverse order.
+- **ARRAY_OPERATIONS:** Basic array programs such as sum, min/max finder, averages, above-average count, closest value, and simple vector operations.
+
   

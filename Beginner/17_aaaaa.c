@@ -137,3 +137,66 @@ int main()
 
 /******************************************************************************/
 
+/*
+    This program reads integer numbers from the user.
+    It calculates the mean (average), variance and standard deviation.
+    All text and variable names use very simple English.
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int i, count;
+    int data[100];               // store input numbers
+    double sum;                  // sum of numbers
+    double mean;                 // average
+    double varSum;               // sum of squared differences
+    double variance;             // variance
+    double stddev;               // standard deviation
+
+    printf("Number of elements: ");   // ask for count
+    if (scanf("%d", &count) != 1)     // read count
+        return 1;                     // end if bad input
+
+    if (count <= 0 || count > 100)   // check valid count
+    {
+        printf("Invalid count (must be 1..100)\n");
+        return 1;
+    }
+
+    printf("Enter the elements:\n");   // ask for elements
+    for (i = 0; i < count; i++)
+    {
+        printf("data[%d] = ", i);      // show index
+        if (scanf("%d", &data[i]) != 1)
+            return 1;                  // end if bad input
+    }
+
+    sum = 0.0;                         // start sum at zero
+    for (i = 0; i < count; i++)
+    {
+        sum += data[i];                // add each number
+    }
+
+    mean = sum / (double) count;       // compute mean
+
+    varSum = 0.0;                      // start variance sum at zero
+    for (i = 0; i < count; i++)
+    {
+        double diff = data[i] - mean;  // difference from mean
+        varSum += diff * diff;         // add squared difference
+    }
+
+    variance = varSum / (double) count;   // population variance
+    stddev = sqrt(variance);              // standard deviation
+
+    printf("Mean (average): %.4f\n", mean);        // print mean
+    printf("Variance: %.4f\n", variance);         // print variance
+    printf("Standard deviation: %.4f\n", stddev); // print std deviation
+
+    return 0;   // end program
+}
+
+/******************************************************************************/

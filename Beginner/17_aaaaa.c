@@ -1,4 +1,6 @@
 /*
+    Find Min–Max Difference
+    Description:
     This program reads numbers from the user.
     It finds the smallest and biggest values.
     Then it prints the difference between them.
@@ -45,6 +47,9 @@ int main()
 /******************************************************************************/
 
 /*
+    Odd–Even Sum and Average
+    Description:
+    
     This program reads numbers from the user.
     It finds the sum and average of odd numbers.
     It also finds the sum and average of even numbers.
@@ -99,6 +104,9 @@ int main()
 
 /******************************************************************************/
 /*
+    Cumulative Sum Array
+    Description:
+    
     This program reads numbers from the user.
     It makes a new array with cumulative sum.
     Each new element is: previous sum + current number.
@@ -138,6 +146,9 @@ int main()
 /******************************************************************************/
 
 /*
+    Mean–Variance–Standard Deviation Calculation
+    Description:
+    
     This program reads integer numbers from the user.
     It calculates the mean (average), variance and standard deviation.
     All text and variable names use very simple English.
@@ -200,3 +211,54 @@ int main()
 }
 
 /******************************************************************************/
+
+/*
+    Find Closest Number to X
+    Description:
+    This program reads numbers from the user.
+    Then it reads a target number X.
+    It finds the number in the array that is closest to X.
+*/
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int i, count, xValue;
+    int nearestDiff;        // smallest difference
+    int nearestNum;         // number closest to X
+    int arr[100];           // array for numbers
+
+    printf("Number of elements: ");      // ask for count
+    if (scanf("%d", &count) != 1)        // read count
+        return 1;                        // stop if invalid input
+
+    for(i = 0; i < count; i++)
+    {
+        printf("arr[%d] = ", i);         // show index
+        scanf("%d", &arr[i]);            // read an element
+    }
+
+    printf("Enter X: ");                 // ask for target X
+    scanf("%d", &xValue);                // read X
+
+    nearestDiff = abs(arr[0] - xValue);  // start difference
+    nearestNum  = arr[0];                // start closest number
+
+    for(i = 1; i < count; i++)
+    {
+        int diff = abs(arr[i] - xValue); // find difference
+
+        if(diff < nearestDiff)           // check smaller difference
+        {
+            nearestDiff = diff;          // update difference
+            nearestNum  = arr[i];        // update closest number
+        }
+    }
+
+    printf("Closest number to %d is %d\n", xValue, nearestNum);   // print result
+
+    return 0;    // end program
+}
+

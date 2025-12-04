@@ -1,6 +1,6 @@
 /*
     This program reads numbers from the user.
-    It finds the smallest and the biggest values.
+    It finds the smallest and biggest values.
     Then it prints the difference between them.
 */
 
@@ -8,40 +8,91 @@
 
 int main()
 {
-    int i, n, enk, enb, rank;
-    int dizi[100];   // array for numbers
+    int i, count, minVal, maxVal, diff;
+    int arr[100];    // array for numbers
 
-    printf("Eleman sayısı: ");   // ask for count
-    scanf("%d", &n);            // read count
+    printf("Number of elements: ");   // ask for count
+    scanf("%d", &count);              // read count
 
-    printf("Dizinin elemanları:\n");  // ask for elements
-    for (i = 0; i < n; i++)
+    printf("Enter the elements:\n");  // ask for elements
+    for(i = 0; i < count; i++)
     {
-        printf("Dizi[%d] = ", i);   // show index
-        scanf("%d", &dizi[i]);      // read number
+        printf("arr[%d] = ", i);      // show index
+        scanf("%d", &arr[i]);         // read number
     }
 
-    enk = dizi[0];   // start smallest
-    enb = dizi[0];   // start biggest
+    minVal = arr[0];   // start smallest
+    maxVal = arr[0];   // start biggest
 
-    for (i = 0; i < n; i++)
+    for(i = 0; i < count; i++)
     {
-        if (dizi[i] > enb)      // check bigger
+        if(arr[i] > maxVal)           // check bigger
         {
-            enb = dizi[i];      // update biggest
+            maxVal = arr[i];          // update max
         }
-        else if (dizi[i] < enk) // check smaller
+        else if(arr[i] < minVal)      // check smaller
         {
-            enk = dizi[i];      // update smallest
+            minVal = arr[i];          // update min
         }
     }
 
-    rank = enb - enk;   // find difference
-    printf("En büyük ile en küçük arasındaki fark : %d\n", rank);
+    diff = maxVal - minVal;           // find difference
+    printf("Difference between biggest and smallest: %d\n", diff);
 
     return 0;    // end program
 }
 
-/*************************************************************************/
+/********************************************************************/
 
+/*
+    This program reads numbers from the user.
+    It finds the sum and average of odd numbers.
+    It also finds the sum and average of even numbers.
+*/
 
+#include <stdio.h>
+
+int main()
+{
+    int i, count, oddSum, oddCount, evenSum, evenCount, arr[100];
+    float oddAvg, evenAvg;
+
+    printf("Number of elements: ");   // ask for count
+    scanf("%d", &count);              // read count
+
+    printf("Enter the elements:\n");  // ask for elements
+    for(i = 0; i < count; i++)
+    {
+        printf("arr[%d] = ", i);      // show index
+        scanf("%d", &arr[i]);         // read number
+    }
+
+    oddSum = 0;        // sum of odd
+    evenSum = 0;       // sum of even
+    oddCount = 0;      // count of odd
+    evenCount = 0;     // count of even
+
+    for(i = 0; i < count; i++)
+    {
+        if(arr[i] % 2 == 1)           // check odd
+        {
+            oddSum += arr[i];         // add odd number
+            oddCount++;               // increase odd count
+        }
+        else                          // even number
+        {
+            evenSum += arr[i];        // add even number
+            evenCount++;              // increase even count
+        }
+    }
+
+    oddAvg = (float) oddSum / oddCount;     // odd avg
+    evenAvg = (float) evenSum / evenCount;  // even avg
+
+    printf("Odd sum: %d\n", oddSum);          // print odd sum
+    printf("Odd average: %.2f\n", oddAvg);    // print odd avg
+    printf("Even sum: %d\n", evenSum);        // print even sum
+    printf("Even average: %.2f\n", evenAvg);  // print even avg
+
+    return 0;   // end program
+}

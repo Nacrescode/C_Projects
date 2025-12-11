@@ -222,3 +222,51 @@ int main()
 }
 
 /******************************************************************************/
+
+/* 
+   This program creates an identity matrix.
+   User enters the size N and the program fills
+   matrix[i][j] = 1 when i == j, else 0.
+   Then it prints the matrix.
+*/
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int i, j, n;
+    int matrix[10][10];   // identity matrix up to 10x10
+
+    printf("Matrix size: ");  // read N
+    scanf("%d", &n);
+
+    /* fill identity matrix */
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (i == j)          // diagonal element
+            {
+                matrix[i][j] = 1;
+            }
+            else                 // non-diagonal
+            {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+
+    /* print matrix */
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("%4d", matrix[i][j]);   // print with 4-space padding
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+

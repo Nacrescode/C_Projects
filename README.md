@@ -16,5 +16,7 @@ This repository contains my C programming projects, including examples and pract
 - **PYRAMID STAR PATTERN:** Prints a centered pyramid made of stars (*) where each row adds two more stars than the previous one
 - **DIGIT SUM AND REVERSE NUMBER:** Calculates the sum of digits of a user-entered number and also prints the number in reverse order.
 - **ARRAY_OPERATIONS:** Basic array programs such as sum, min/max finder, averages, above-average count, closest value, and simple vector operations.
+- **MATRIX_OPERATIONS:** Includes basic matrix programs such as finding the maximum value in a matrix, calculating the average of positive elements,  
+  adding two matrices (A + B = C), and generating an identity matrix based on user-entered size.
 
   

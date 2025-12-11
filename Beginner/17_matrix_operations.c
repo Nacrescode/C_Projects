@@ -84,3 +84,141 @@ int main(void)
 
 /******************************************************************************/
 
+/* 
+   This program reads an MxN matrix,
+   finds all positive numbers,
+   calculates the average of them,
+   and prints the matrix and the result.
+*/
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int i, j, m, n;
+    int mat[10][10];      // matrix up to 10x10
+    int ptotal, pcount;   // sum of positive numbers and count of positives
+    float avg;            // average value
+
+    printf("Row count: ");     // ask number of rows
+    scanf("%d", &m);
+
+    printf("Column count: ");  // ask number of columns
+    scanf("%d", &n);
+
+    /* read matrix values */
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("Matrix[%d,%d]: ", i, j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+
+    ptotal = 0;   // start total at 0
+    pcount = 0;   // start count at 0
+
+    /* scan matrix and find positive values */
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            if (mat[i][j] > 0)     // check if number is positive
+            {
+                ptotal = ptotal + mat[i][j];   // add to total
+                pcount = pcount + 1;           // increase count
+            }
+        }
+    }
+
+    avg = (float) ptotal / pcount;  // calculate average
+
+    /* print matrix */
+    printf("\nMatrix\n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("%6d", mat[i][j]);
+        }
+        printf("\n");
+    }
+
+    /* print result */
+    printf("\nAverage of positive numbers: %8.3f\n", avg);
+
+    return 0;
+}
+
+/******************************************************************************/
+/* 
+   This program reads two MxN matrices (A and B),
+   adds them element by element,
+   and creates matrix C where C[i][j] = A[i][j] + B[i][j].
+   Finally it prints matrix C.
+*/
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int i, j, m, n;
+    int A[10][10];   // first matrix
+    int B[10][10];   // second matrix
+    int C[10][10];   // result matrix
+
+    printf("Row count: ");       // read number of rows
+    scanf("%d", &m);
+
+    printf("Column count: ");    // read number of columns
+    scanf("%d", &n);
+
+    /* read matrix A */
+    printf("\nEnter Matrix A values:\n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("A[%d,%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    /* read matrix B */
+    printf("\nEnter Matrix B values:\n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("B[%d,%d]: ", i, j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    /* compute C = A + B */
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            C[i][j] = A[i][j] + B[i][j];   // element-wise sum
+        }
+    }
+
+    /* print matrix C */
+    printf("\nMatrix C (A + B)\n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            printf("%6d", C[i][j]);       // print with 6-space format
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+/******************************************************************************/

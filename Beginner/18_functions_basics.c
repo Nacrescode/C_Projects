@@ -236,4 +236,12 @@ int main(void)
     while (i <= 2 * n)
     {
         cosine = cosine + sign * power(x, i) / factorial(i);
-        sign
+        sign = sign * (-1);
+        i = i + 2;
+    }
+
+    /* Print result */
+    printf("Cosine(%d) = %f", x, cosine);
+
+    return 0;
+}

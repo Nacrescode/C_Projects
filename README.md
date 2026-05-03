@@ -1,6 +1,9 @@
 # C_Projects
 This repository contains my C programming projects, including examples and practice exercises.
 
+## Author
+Sercan Özverenli
+
 ## Beginner
 
 - **AREA CALCULATION:** Calculates the area of a triangle using base and height
